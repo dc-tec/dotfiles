@@ -1,0 +1,53 @@
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+# Neovim PATH
+export PATH="$PATH:/opt/nvim-linux64/bin"
+
+# Path to your oh-my-zsh installation.
+export ZSH="$HOME/.oh-my-zsh"
+
+# ZSH Theme
+ZSH_THEME="robbyrussell"
+
+# Plugins
+plugins=(git
+	golang \
+	kubectl \
+	git-flow \
+	colored-man-pages \
+	ssh-agent \
+	zsh-interactive-cd \
+	history \
+	helm \
+	ansible \
+	z \
+	docker \
+	aws \
+	terraform \
+	nvm \
+	npm
+	)
+
+source $ZSH/oh-my-zsh.sh
+export EDITOR="nvim"
+
+# Aliases
+alias vim="nvmim"
+alias nano="nvim"
+alias vi="nvim"
+alias ohmyzsh="nvim ~/.oh-my-zsh"
+alias zshconfig="nvim ~/.zshrc"
+alias zshapply="source ~/.zshrc"
+alias tmuxconfig="nvim ~/.tmux.conf"
+alias tmuxapply="tmux source ~/.tmux.conf"
+alias ssconfig="nvim ~/.config/starship.toml"
+alias "python"="python3"
+alias cd="z"
+alias cat="bat --paging=never"
+alias ls="eza --icons --group-directories-first"
+alias ll="eza --icons --group-directories-first -lah"
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+eval "$(starship init zsh)"
+eval "$(z init zsh)"

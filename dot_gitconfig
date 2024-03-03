@@ -1,0 +1,11 @@
+[credential]
+	helper = /mnt/c/Program\\ Files/Git/mingw64/bin/git-credential-manager.exe
+[credential "https://dev.azure.com"]
+	useHttpPath = true
+[user]
+	name = Roel de Cort
+	email = roel@decort.tech
+[includeIf "gitdir:~/projects/work"]
+	path = ~/projects/work/.gitconfig
+[init]
+	defaultbranch = main
