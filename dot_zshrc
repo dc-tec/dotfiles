@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Neovim PATH
 export PATH="$PATH:/opt/nvim-linux64/bin"
@@ -37,11 +37,11 @@ alias vim="nvmim"
 alias nano="nvim"
 alias vi="nvim"
 alias ohmyzsh="nvim ~/.oh-my-zsh"
-alias zshconfig="nvim ~/.zshrc"
-alias zshapply="source ~/.zshrc"
-alias tmuxconfig="nvim ~/.tmux.conf"
-alias tmuxapply="tmux source ~/.tmux.conf"
-alias ssconfig="nvim ~/.config/starship.toml"
+alias zshconfig="chezmoi edit  ~/.zshrc"
+alias zshapply="chezmoi apply ~/.zshrc"
+alias tmuxconfig="chezmoi edit ~/.tmux.conf"
+alias tmuxapply="chezmoi apply ~/.tmux.conf"
+alias ssconfig="chezmoi edit ~/.config/starship.toml"
 alias "python"="python3"
 alias cd="z"
 alias cat="bat --paging=never"
