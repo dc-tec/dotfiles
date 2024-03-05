@@ -5,7 +5,7 @@
 [user]
 	name = Roel de Cort
 	email = roel@decort.tech
-[includeIf "gitdir:~/projects/work"]
+[includeIf "gitdir:~/projects/work/**"]
 	path = ~/projects/work/.gitconfig
 [init]
 	defaultbranch = main
