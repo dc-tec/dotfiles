@@ -29,7 +29,10 @@ plugins=(git
 	npm
 	)
 
+# Sources
 source $ZSH/oh-my-zsh.sh
+
+# Exports
 export EDITOR="nvim"
 export PATH="$PATH:/home/roelc/.local/bin"
 
@@ -49,6 +52,8 @@ alias home="cd ~/"
 alias work="cd ~/projects/work/"
 alias personal="cd ~/projects/personal/"
 alias "python"="python3"
+alias pyb="source ~/.venvs/base/bin/activate"
+alias pybd="~/.venvs/base/bin/deactivate"
 alias cd="z"
 alias cat="bat --paging=never"
 alias ls="eza --icons --group-directories-first"
