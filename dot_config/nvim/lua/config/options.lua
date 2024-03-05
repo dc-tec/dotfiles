@@ -9,4 +9,4 @@ opt.foldenable = false -- never fold!
 opt.scrolloff = 8 -- start scrolling 8 lines from the edge
 opt.linebreak = true -- wrap lines at convenient points
 
-vim.g.mkdp_browser = "/mnt/c/Program Files (x86)/Microsoft/Edge/Application/msedge.exe" -- Set Markdown Preview to use Edge
+vim.g.mkdp_browser = "C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe" -- Set Markdown Preview to use Edge
