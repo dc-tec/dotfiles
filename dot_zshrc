@@ -1,47 +1,53 @@
-# If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+# Set Zsh auto suggestions
+source $HOMEBREW_PREFIX/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
-# Neovim PATH
+# Ensure Homebrew is in PATH and set up
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+# Add Neovim to PATH
 export PATH="$PATH:/opt/nvim-linux64/bin"
 
-# Path to your oh-my-zsh installation.
+# Set Oh My Zsh path
 export ZSH="$HOME/.oh-my-zsh"
 
-# ZSH Theme
+# Set Zsh theme
 ZSH_THEME="robbyrussell"
 
-# Plugins
-plugins=(git
-	golang \
-	kubectl \
-	git-flow \
-	colored-man-pages \
-	ssh-agent \
-	zsh-interactive-cd \
-	history \
-	helm \
-	ansible \
-	z \
-	docker \
-	aws \
-	terraform \
-	nvm \
-	npm
-	)
+# Define plugins
+plugins=(
+    git
+    golang
+    kubectl
+    git-flow
+    colored-man-pages
+    ssh-agent
+    zsh-interactive-cd
+    history
+    helm
+    ansible
+    z
+    docker
+    aws
+    terraform
+    nvm
+    npm
+)
 
-# Sources
+# Load Oh My Zsh
 source $ZSH/oh-my-zsh.sh
 
-# Exports
+# Add custom paths
+export PATH="$HOME/bin:/usr/local/bin:$HOME/.local/bin:$PATH"
+
+# Set default editor
 export EDITOR="nvim"
-export PATH="$PATH:/home/roelc/.local/bin"
 
 # Aliases
-alias vim="nvmim"
+alias vim="nvim"
 alias nano="nvim"
 alias vi="nvim"
 alias ohmyzsh="nvim ~/.oh-my-zsh"
-alias zshconfig="chezmoi edit  ~/.zshrc"
+alias zshconfig="chezmoi edit ~/.zshrc"
 alias zshapply="chezmoi apply ~/.zshrc && source ~/.zshrc"
 alias tmuxconfig="chezmoi edit ~/.tmux.conf"
 alias tmuxapply="chezmoi apply ~/.tmux.conf && tmux source ~/.tmux.conf"
@@ -51,15 +57,17 @@ alias nvimapply="chezmoi apply ~/.config/nvim/"
 alias home="cd ~/"
 alias work="cd ~/projects/work/"
 alias personal="cd ~/projects/personal/"
-alias "python"="python3"
+alias python="python3"
 alias pyb="source ~/.venvs/base/bin/activate"
 alias pybd="~/.venvs/base/bin/deactivate"
-alias cd="z"
+alias gcl="git clone"
 alias cat="bat --paging=never"
 alias ls="eza --icons --group-directories-first"
 alias ll="eza --icons --group-directories-first -lah"
-alias gcl="git clone"
 
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+# Initialize Starship prompt
 eval "$(starship init zsh)"
-eval "$(z init zsh)"
+
+# Enable Zsh autosuggestions
+source $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
