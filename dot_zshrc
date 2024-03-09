@@ -64,7 +64,6 @@ alias gcl="git clone"
 alias cat="bat --paging=never"
 alias ls="eza --icons --group-directories-first"
 alias ll="eza --icons --group-directories-first -lah"
-alias xdg-open="wsl-open"
 
 # Initialize Starship prompt
 eval "$(starship init zsh)"
