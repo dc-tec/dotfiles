@@ -39,7 +39,11 @@ return {
         marksman = {},
         powershell_es = {},
         -- azure_pipelines_ls = {},
-        -- terraformls = {},
+        terraformls = {
+          cmd = { "terraform-ls", "serve" },
+          filetypes = { "terraform", "terraform-vars" },
+          root_dir = util.root_pattern(".terraform", ".git"),
+        },
         helm_ls = {},
       },
     },

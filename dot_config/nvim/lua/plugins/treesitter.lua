@@ -19,6 +19,7 @@ return {
         "go",
         "bicep",
         "terraform",
+        "hcl",
       },
     },
   },
